@@ -24,8 +24,8 @@ import androidx.compose.ui.unit.dp
 import coil.compose.rememberAsyncImagePainter
 import com.example.remindbyme.activity.TaskActivity
 import com.example.remindbyme.entity.UserInfo
-import com.example.remindbyme.ui.theme.RemindByMeTheme
 import com.example.remindbyme.common.CustomComponent
+import com.example.remindbyme.ui.theme.RemindByMeTheme
 import com.example.remindbyme.ui.theme.buttonColor
 
 class MainActivity : ComponentActivity() {
@@ -37,7 +37,9 @@ class MainActivity : ComponentActivity() {
                 CustomComponent.SetStatusBarColor(buttonColor)
 
                 Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
-                    Main(this, modifier = Modifier.padding(innerPadding))
+                    Main(this, modifier = Modifier.padding(
+                        start = 4.dp,
+                        top = 0.dp))
                 }
             }
         }
